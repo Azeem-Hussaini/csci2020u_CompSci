@@ -1,0 +1,16 @@
+plugins {
+    id "application"
+}
+apply plugin: 'java'
+ext {
+   javaMainClass = "lab02.CSVDemo"
+}
+application {
+    mainClassName = javaMainClass
+}
+repositories {
+    mavenCentral()
+}
+dependencies {
+    compile "org.apache.commons:commons-csv:1.5"
+}
