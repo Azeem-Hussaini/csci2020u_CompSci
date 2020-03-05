@@ -1,3 +1,5 @@
+//Author: Azeem Syed Hussaini: 100707191
+//Date: March 5th 2020
 
 import javafx.application.Application;
 import javafx.stage.Stage;
@@ -13,8 +15,10 @@ public class DraggingPoint extends Application {
     @Override
     public void start(Stage primaryStage) {
 
+        //create circle
         Circle circle = new Circle(200, 200, 100);
 
+        // arrays for sides, angles and points
         Line[] sides = new Line[3];
         Text[] angles = new Text[3];
         Circle[] points = new Circle[3];
@@ -31,6 +35,7 @@ public class DraggingPoint extends Application {
             point.setCenterX(xCord);
             point.setCenterY(yCord);
 
+            //create action for dragging point
             point.setOnMouseDragged(e -> {
                 if (e.getButton().equals(MouseButton.PRIMARY)) {
                     double angle = Math.atan2(e.getY() - circle.getCenterY(), e.getX() - circle.getCenterX());
@@ -39,6 +44,7 @@ public class DraggingPoint extends Application {
                     circle1.setCenterX(circle.getCenterX() + 100 * Math.cos(angle));
                     circle1.setCenterY(circle.getCenterY() + 100 * Math.sin(angle));
 
+                    //find each angle by looping throughs
                     for(int j = 0; j < 3; j++) {
                         Line side1 = sides[(j+1) % 3];
                         double startX1 = side1.getStartX();
@@ -61,8 +67,10 @@ public class DraggingPoint extends Application {
                         double endY3 = side3.getEndY();
                         double line3 = Math.sqrt(Math.pow(startX3 - endX3, 2) + Math.pow(startY3 - endY3, 2));
 
+                        //calculate angle
                         angle = Math.toDegrees(Math.acos((line1 * line1 - line2 * line2 - line3 * line3) / (-2 * line2 * line3)));
 
+                        //round angle to nearest 2 decimals
                         angle = Math.round(angle*100.0)/100.0;
                         angles[j].setText(Double.toString(angle));
                     }
@@ -84,6 +92,7 @@ public class DraggingPoint extends Application {
 
             Line line = new Line();
             Text text = new Text();
+
 
             line.startXProperty().bind(points[i].centerXProperty());
             line.startYProperty().bind(points[i].centerYProperty());

@@ -1,3 +1,6 @@
+//Author: Azeem Syed Hussaini: 100707191
+//Date: March 5th 2020
+
 import javafx.application.Application;
 import javafx.geometry.HPos;
 import javafx.geometry.Insets;
@@ -20,6 +23,7 @@ public class InvestmentValueCalculator extends Application {
         pane.setAlignment(Pos.TOP_RIGHT);
         pane.setPadding(new Insets(10,10,10,10));
 
+        //create textfields for inputs
         TextField investmentAmount = new TextField();
         investmentAmount.setAlignment(Pos.TOP_RIGHT);
         TextField years = new TextField();
@@ -28,8 +32,10 @@ public class InvestmentValueCalculator extends Application {
         annualInterestRate.setAlignment(Pos.TOP_RIGHT);
         TextField futureValue = new TextField();
         futureValue.setAlignment(Pos.TOP_RIGHT);
+        //make last textfield uneditable since it is only an output
         futureValue.setEditable(false);
 
+        //add textfields to pane
         pane.add(new Label("Investment Amount: "),0,0);
         pane.add(investmentAmount, 1,0);
         pane.add(new Label("Years: "), 0 , 1);
@@ -39,7 +45,7 @@ public class InvestmentValueCalculator extends Application {
         pane.add(new Label("Future Value: "),0,3);
         pane.add(futureValue, 1,3);
 
-
+        //create a button to calculate
         Button btCalc = new Button("Calculate");
         pane.add(btCalc, 1,6);
         GridPane.setHalignment(btCalc, HPos.LEFT);
@@ -52,6 +58,7 @@ public class InvestmentValueCalculator extends Application {
                    double years1 = Double.parseDouble(years.getText());
                    double interest = Double.parseDouble(annualInterestRate.getText());
 
+                   //equation for Future Value
                    double num = investment * Math.pow(1 + (interest/12/100), years1 * 12);
                    num = Math.round(num*100.0)/100.0;
                    futureValue.setText(Double.toString(num));
@@ -59,9 +66,10 @@ public class InvestmentValueCalculator extends Application {
                 }
         );
 
+        //display scene
         Scene scene = new Scene(pane, 300, 200);
         primaryStage.setScene(scene);
-        primaryStage.setTitle("Lab 04 Solution");
+        primaryStage.setTitle("InvestmentCalculator");
         primaryStage.show();
     }
 }

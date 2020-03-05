@@ -63,8 +63,12 @@
       <setting name="OPEN_NEW_TAB" value="false" />
     </FindUsagesManager>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectId" id="1YeeY4tdtuew7ehyuiL8Fnot5xh" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectReloadState">
     <option name="STATE" value="0" />
   </component>
@@ -219,10 +223,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Histogram" />
-        <item itemvalue="Application.InvestmentValueCalculator" />
-        <item itemvalue="Application.Histogram1" />
         <item itemvalue="Application.DraggingPoint" />
+        <item itemvalue="Application.InvestmentValueCalculator" />
         <item itemvalue="Application.DisplayCards" />
+        <item itemvalue="Application.Histogram1" />
       </list>
     </recent_temporary>
   </component>
@@ -260,22 +264,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="224" y="158" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1583309207544" />
-    <state width="1342" height="79" key="GridCell.Tab.0.bottom" timestamp="1583398412741">
+    <state width="1342" height="79" key="GridCell.Tab.0.bottom" timestamp="1583432042234">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1342" height="79" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1583398412741" />
-    <state width="1342" height="79" key="GridCell.Tab.0.center" timestamp="1583398412741">
+    <state width="1342" height="79" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1583432042234" />
+    <state width="1342" height="79" key="GridCell.Tab.0.center" timestamp="1583432042233">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1342" height="79" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1583398412741" />
-    <state width="1342" height="79" key="GridCell.Tab.0.left" timestamp="1583398412741">
+    <state width="1342" height="79" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1583432042233" />
+    <state width="1342" height="79" key="GridCell.Tab.0.left" timestamp="1583432042233">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1342" height="79" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1583398412741" />
-    <state width="1342" height="79" key="GridCell.Tab.0.right" timestamp="1583398412741">
+    <state width="1342" height="79" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1583432042233" />
+    <state width="1342" height="79" key="GridCell.Tab.0.right" timestamp="1583432042233">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1342" height="79" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1583398412741" />
+    <state width="1342" height="79" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1583432042233" />
     <state width="1342" height="183" key="GridCell.Tab.1.bottom" timestamp="1583393672981">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -300,5 +304,16 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="270" y="121" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1583309099675" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/InvestmentValueCalculator.java</url>
+          <line>57</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

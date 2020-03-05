@@ -1,3 +1,6 @@
+//Author: Azeem Syed Hussaini: 100707191
+//Date: March 5th 2020
+
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 import javafx.application.Application;
@@ -14,31 +17,42 @@ import javafx.scene.control.Button;
 
 public class Histogram extends Application{
     public void start(Stage stage) throws Exception{
-        TextField txt = new TextField("test.txt");
+
+        //create textfield
+        TextField txt = new TextField("test2.txt");
         txt.setTranslateX(80);
         txt.setTranslateY(230);
 
+        //create label
         Label lbl = new Label("FileName");
         lbl.setBorder(new Border(new BorderStroke(Color.BLACK, BorderStrokeStyle.SOLID, null, new BorderWidths(0.5))));
         lbl.setTranslateX(20);
         lbl.setTranslateY(230);
 
-
+        //create button
         Button btView = new Button("View");
         btView.setTranslateX(250);
         btView.setTranslateY(230);
         GridPane.setHalignment(btView, HPos.LEFT);
 
+        //bind button to enter
+        btView.setDefaultButton(true);
+
+        //button action
         btView.setOnAction(e ->
                 {
+                    //get the file
                     java.io.File file = new java.io.File(txt.getText());
-
+                    btView.setDefaultButton(false);
                     boolean done = false;
+
+                    //loop through so you can continually check different inputs
                     while (!done) {
                     try{
                     Scanner input = new Scanner(file);
                     int[] arr = new int[26];
 
+                    //get all input from text
                     while (input.hasNext()){
                         String word = input.next();
                         char char1 = ' ';
@@ -48,6 +62,7 @@ public class Histogram extends Application{
                             char1 = Character.toLowerCase(char1);
                             num = (int)char1 - 97;
                             int num2 = (int)char1;
+                            //add to array for number of letters but only include a-z from input
                             if (num2 >= 97 && num2 <= 122)
                                 arr[num] = arr[num] + 1;
                         }
@@ -90,12 +105,15 @@ public class Histogram extends Application{
                             labels[16], labels[17], labels[18], labels[19],labels[20], labels[21], labels[22], labels[23],
                             labels[24], labels[25], btView, txt, lbl);
 
+                    //create scene
                     Scene scene = new Scene(group, 500, 300);
 
                     stage.setScene(scene);
 
 
                     stage.show();
+
+                    btView.setDefaultButton(true);
 
                     done = true;
                     } catch (FileNotFoundException f) {
